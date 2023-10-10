@@ -11,14 +11,16 @@ btnSubmit.addEventListener('click',
 function() {
     const passengerName = document.getElementById('name-surname').value;
     const nKm = parseInt(document.getElementById('nKm').value);
+    const age = document.getElementById('age').value;
 
-    if (nKm === ''|| passengerName === '') {
+    if (nKm === ''|| passengerName === '' || age === '') {
         alert('Compila tutti i campi')
     } else if (isNaN(nKm)) {
         alert ('Inserisci un valore numerico per i km')
     } else {
-        console.log (passengerName, nKm);
+        console.log (passengerName, nKm, age);
     }
+
 
 }
 )
