@@ -49,7 +49,7 @@ function() {
         }
         console.log (price);
         const finalPrice = document.getElementById('price');
-        finalPrice.innerHTML = price.toFixed(2);
+        finalPrice.innerHTML = price.toFixed(2) + ' €';
     }
 }
 )
