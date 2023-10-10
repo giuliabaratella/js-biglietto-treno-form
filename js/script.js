@@ -43,9 +43,9 @@ function() {
 
         let price = (nKm * priceKm);
         if (age === 'under') {
-            price  = price - (price * discountUnder18);
+            price -= (price * discountUnder18);
         } else if (age === 'over') {
-            price  = price - (price * discountOver65);
+            price -= (price * discountOver65);
         }
         console.log (price);
         const finalPrice = document.getElementById('price');

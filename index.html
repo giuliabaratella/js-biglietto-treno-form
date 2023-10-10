@@ -13,31 +13,32 @@
 
         <!-- form  -->
         <div class="form-wrapper container-sm py-4 mb-5 text-center">
-            <form id="ticket-form" class="d-flex justify-content-evenly fw-bold">
-                <div class="mb-3">
-                    <label for="name-surname" class="form-label">Nome e Cognome</label>
-                    <input type="text" class="form-control" id="name-surname" value="" name="name-surname">
+            <form id="ticket-form">
+                <div class="form-options d-flex justify-content-evenly fw-bold">
+                    <div class="mb-3">
+                        <label for="name-surname" class="form-label">Nome e Cognome</label>
+                        <input type="text" class="form-control" id="name-surname" value="" name="name-surname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nKm" class="form-label">Km da percorrere</label>
+                        <input type="text" class="form-control" id="nKm" value="" name="nKm">
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Fascia d'età</label>
+                        <select id="age" name="age" class="form-select">
+                            <option value="">Scegli...</option>
+                            <option value="under">Minorenne</option>
+                            <option value="standard">Maggiorenne</option>
+                            <option value="over">Over65</option>
+                        </select>
+                    </div>
                 </div>
-
                 <div class="mb-3">
-                    <label for="nKm" class="form-label">Km da percorrere</label>
-                    <input type="text" class="form-control" id="nKm" value="" name="nKm">
-                </div>
-
-                <div class="mb-3">
-                    <label for="age" class="form-label">Fascia d'età</label>
-                    <select id="age" name="age" class="form-select">
-                        <option value="">Scegli...</option>
-                        <option value="under">Minorenne</option>
-                        <option value="standard">Maggiorenne</option>
-                        <option value="over">Over65</option>
-                    </select>
+                    <button id="submit" class="btn btn-light" type="button">Genera</button>
+                    <button id="reset" class="btn btn-light" type="button">Annulla</button>
                 </div>
             </form>
-            <div class="mb-3">
-                <button id="submit" class="btn btn-light">Genera</button>
-                <button id="reset" class="btn btn-light">Annulla</button>
-            </div>
+            
         </div>
 
         <!-- biglietto  -->
