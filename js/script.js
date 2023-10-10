@@ -40,6 +40,16 @@ function() {
 
         const cpCode = document.getElementById('cp-code');
         cpCode.innerHTML = Math.floor(Math.random() * 10000) + 1000;
+
+        let price = (nKm * priceKm);
+        if (age === 'under') {
+            price  = price - (price * discountUnder18);
+        } else if (age === 'over') {
+            price  = price - (price * discountOver65);
+        }
+        console.log (price);
+        const finalPrice = document.getElementById('price');
+        finalPrice.innerHTML = price.toFixed(2);
     }
 }
 )
