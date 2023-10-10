@@ -7,6 +7,7 @@ const btnSubmit = document.getElementById('submit');
 const btnReset = document.getElementById('reset');
 console.log (submit, reset);
 
+
 btnSubmit.addEventListener('click', 
 function() {
     const passengerName = document.getElementById('name-surname').value;
@@ -20,9 +21,13 @@ function() {
     } else {
         console.log (passengerName, nKm, age);
     }
-
-
 }
 )
 
+btnReset.addEventListener('click',
+function() {
+    const ticketForm = document.getElementById("ticket-form");
+    ticketForm.reset();
+}
+)
 
