@@ -20,6 +20,20 @@ function() {
         alert ('Inserisci un valore numerico per i km')
     } else {
         console.log (passengerName, nKm, age);
+
+        const ticketContainer = document.querySelector('.ticket');
+        ticketContainer.classList.remove ('d-none');
+        const nameSurname = document.getElementById('passenger-name');
+        nameSurname.innerHTML = passengerName;
+
+        const offer = document.getElementById('offer');
+        if (age === 'under') {
+            offer.innerHTML = 'Promo Under18'
+        } else if (age === 'over') {
+            offer.innerHTML = 'Promo Over65'
+        } else if (age === 'standard'){
+            offer.innerHTML = 'Tariffa ordinaria'
+        }
     }
 }
 )
