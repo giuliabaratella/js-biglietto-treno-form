@@ -34,6 +34,12 @@ function() {
         } else if (age === 'standard'){
             offer.innerHTML = 'Tariffa ordinaria'
         }
+
+        const nCarriage = document.getElementById('ncarriage');
+        nCarriage.innerHTML = Math.floor(Math.random() * 10) + 1;
+
+        const cpCode = document.getElementById('cp-code');
+        cpCode.innerHTML = Math.floor(Math.random() * 10000) + 1000;
     }
 }
 )
