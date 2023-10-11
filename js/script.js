@@ -13,14 +13,12 @@ function() {
     const passengerName = document.getElementById('name-surname').value;
     const nKm = parseInt(document.getElementById('nKm').value);
     const age = document.getElementById('age').value;
-
-    if (nKm === ''|| passengerName === '' || age === '') {
-        alert('Compila tutti i campi')
-    } else if (isNaN(nKm)) {
-        alert ('Inserisci un valore numerico per i km')
-    } else {
+    const errorMsg = document.getElementById('error-msg');
+  
+    if (nKm && passengerName && age) {
         console.log (passengerName, nKm, age);
 
+        errorMsg.classList.add('d-none');
         const ticketContainer = document.querySelector('.ticket');
         ticketContainer.classList.remove ('d-none');
         const nameSurname = document.getElementById('passenger-name');
@@ -50,14 +48,21 @@ function() {
         console.log (price);
         const finalPrice = document.getElementById('price');
         finalPrice.innerHTML = price.toFixed(2) + ' €';
+    } else {
+        errorMsg.classList.remove('d-none');
+        errorMsg.innerHTML = 'Attenzione! I valori inseriti non sono corretti.'
     }
 }
 )
 
 btnReset.addEventListener('click',
 function() {
-    const ticketForm = document.getElementById("ticket-form");
-    ticketForm.reset();
+    let passengerName = document.getElementById('name-surname');
+    let nKm = document.getElementById('nKm');
+    let age = document.getElementById('age');
+    age.value = '';
+    nKm.value = '';
+    passengerName.value = '';
 }
 )
 
